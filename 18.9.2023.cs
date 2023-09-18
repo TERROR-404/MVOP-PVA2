@@ -7,6 +7,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            // úloha 3
+
             /*DateTime amerika = new DateTime(1492,10,12);
             DateTime hus = new DateTime(1415,7,6);
 
@@ -18,7 +20,9 @@ namespace ConsoleApp1
             Console.WriteLine("Amerika: " + amerika.DayOfWeek);
             Console.WriteLine("Hus: " + hus.DayOfWeek);*/
 
-            Stack z = new Stack(10);
+            // úloha 4
+
+            Stack z = new Stack(3);
             Console.WriteLine(z.IsEmpty());
             z.Push('a');
             z.Push('b');
@@ -32,28 +36,49 @@ namespace ConsoleApp1
     }
     class Stack
     {
-        public char[] array;
-        public int index;
+        private char[] array;
+        private int index;
 
         public Stack(int size)
         {
             array = new char[size];
-            index = 0;
+            index = -1;
         }
         public void Push(char c)
         {
-            index++;
-            array[index] = c;
+            if (index+1 >= array.Length)
+            {
+                throw new InvalidOperationException("Zásobník je plný");
+            }
+            else
+            {
+                index++;
+                array[index] = c;
+            }
         }
         public void Pop()
         {
-            char a = array[index];
-            Console.WriteLine(a);
-            index--;
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Zásobník je prázdný");
+            }
+            else
+            {
+                char a = array[index];
+                Console.WriteLine(a);
+                index--;
+            }
         }
         public char Peek()
         {
-            return array[index];
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("Zásobník je prázdný");
+            }
+            else
+            {
+                return array[index];
+            }
         }
         public bool IsEmpty()
         {
