@@ -16,7 +16,7 @@ namespace EncryptDecrypt
             string key = "Josef";
             string crypted = q.Encrypt(value, key);
             Console.WriteLine(crypted);
-            Console.WriteLine(q.Decrypt(crypted,key));
+            Console.WriteLine(q.Decrypt(key));
         }
     }
 
@@ -24,7 +24,8 @@ namespace EncryptDecrypt
     {
         public string Encrypt(string input, string key)
         {
-            FileStream fs = File.Create("crypted.cry");
+            File.Create("crypted.cry").Close();
+            
             string output = "";
             input = input.Replace(" ","");
             input = input.ToUpper();
@@ -39,11 +40,25 @@ namespace EncryptDecrypt
                 j++;
             }
             
+            using(StreamWriter sw = new StreamWriter("crypted.cry"))
+            {
+                sw.WriteLine(output);
+            }
+            
             return output;
         }
 
-        public string Decrypt(string input, string key)
+        public string Decrypt(string key)
         {
+            string input = "";
+            using(StreamReader sr = new StreamReader("crypted.cry"))
+            {
+                string line;
+                while((line = sr.ReadLine()) != null)
+                {
+                    input += line;
+                }
+            }
             string output = "";
             int j = 0;
             for (int i = 0; i < input.Length; i++)
@@ -55,6 +70,7 @@ namespace EncryptDecrypt
                 output += (char)(input[i]^key[j]);
                 j++;
             }
+            
             return output;
         }
     }
