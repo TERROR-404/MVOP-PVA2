@@ -22,7 +22,7 @@ namespace ConsoleApp1
 
             // úloha 4
 
-            Stack z = new Stack(3);
+            /*Stack z = new Stack(3);
             Console.WriteLine(z.IsEmpty());
             z.Push('a');
             z.Push('b');
@@ -31,7 +31,49 @@ namespace ConsoleApp1
             z.Pop();
             Console.WriteLine(z.Peek());
             Console.WriteLine(z.IsEmpty());
-            z.PrintStack();
+            z.PrintStack();*/
+            
+            // úloha 5
+
+            Console.WriteLine(BracketValidator("[{((]]"));
+        }
+        
+        public  static int BracketValidator(string text)
+        {
+            Stack s = new Stack(text.Length/2);
+            string brackets = "()[]{}";
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                int index = brackets.IndexOf(text[i]);
+                if (index%2 == 0)
+                {
+                    try
+                    {
+                        s.Push(text[i]);
+                    }
+                    catch(InvalidOperationException)
+                    {
+                        return i;
+                    }
+                }
+                else if (index%2==1)
+                {
+                    char popped = s.Pop();
+
+                    if (popped != brackets[index-1])
+                    {
+                        return i;
+                    }
+                }
+            }
+
+            if (!s.IsEmpty())
+            {
+                return text.Length;
+            }
+
+            return -1;
         }
     }
     class Stack
@@ -56,7 +98,7 @@ namespace ConsoleApp1
                 array[index] = c;
             }
         }
-        public void Pop()
+        public char Pop()
         {
             if (IsEmpty())
             {
@@ -65,8 +107,8 @@ namespace ConsoleApp1
             else
             {
                 char a = array[index];
-                Console.WriteLine(a);
                 index--;
+                return a;
             }
         }
         public char Peek()
@@ -82,16 +124,14 @@ namespace ConsoleApp1
         }
         public bool IsEmpty()
         {
-            bool b = true;
-            for (int i = 0; i < array.Length; i++)
+            if (index==-1)
             {
-                if (array[i] != 0)
-                {
-                    b =  false;
-                    break;
-                }
+                return true;
             }
-            return b;
+            else
+            {
+                return false;
+            }
         }
         public void PrintStack()
         {
