@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace EncryptDecrypt
 {
@@ -21,9 +22,9 @@ namespace EncryptDecrypt
 
     class EncryptDecrypt
     {
-        
         public string Encrypt(string input, string key)
         {
+            FileStream fs = File.Create("crypted.cry");
             string output = "";
             input = input.Replace(" ","");
             input = input.ToUpper();
