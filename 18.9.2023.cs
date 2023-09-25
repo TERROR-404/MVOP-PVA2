@@ -35,12 +35,12 @@ namespace ConsoleApp1
             
             // úloha 5
 
-            Console.WriteLine(BracketValidator("[{((]]"));
+            Console.WriteLine(BracketValidator("{[((]]"));
         }
         
         public  static int BracketValidator(string text)
         {
-            Stack s = new Stack(text.Length/2);
+            Stack s = new Stack(text.Length);
             string brackets = "()[]{}";
 
             for (int i = 0; i < text.Length; i++)
@@ -48,14 +48,7 @@ namespace ConsoleApp1
                 int index = brackets.IndexOf(text[i]);
                 if (index%2 == 0)
                 {
-                    try
-                    {
-                        s.Push(text[i]);
-                    }
-                    catch(InvalidOperationException)
-                    {
-                        return i;
-                    }
+                    s.Push(text[i]);
                 }
                 else if (index%2==1)
                 {
