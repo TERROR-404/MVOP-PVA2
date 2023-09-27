@@ -7,15 +7,19 @@ namespace EncryptDecrypt
     {
         public static void Main(string[] args)
         {
-            EncryptDecrypt q = new EncryptDecrypt();
-            int s = 'A' ^ 'U';
+            //uloha 6
+            
+            /*int s = 'A' ^ 'U';
             Console.WriteLine("sifrovano" + (char)s + ':'+s);
             Console.WriteLine("desifrovano"+(s^'A'));
-            Console.WriteLine();
-            string value = "Pepa";
-            string key = "Josef";
-            string crypted = q.Encrypt(value, key);
-            Console.WriteLine(crypted);
+            Console.WriteLine();*/
+            EncryptDecrypt q = new EncryptDecrypt();
+            
+            Console.Write("Zadejte text: ");
+            string value = Console.ReadLine();
+            Console.Write("Zadejte klíč: ");
+            string key = Console.ReadLine();
+            Console.WriteLine(q.Encrypt(value, key));
             Console.WriteLine(q.Decrypt(key));
         }
     }
@@ -24,7 +28,7 @@ namespace EncryptDecrypt
     {
         public string Encrypt(string input, string key)
         {
-            File.Create("crypted.cry").Close();
+            File.Create("crypted.cry").Close(); // soubor se nachazi na C:\Users\cmerd\RiderProjects\EncryptDecrypt\EncryptDecrypt\bin\Debug
             
             string output = "";
             input = input.Replace(" ","");
@@ -53,11 +57,7 @@ namespace EncryptDecrypt
             string input = "";
             using(StreamReader sr = new StreamReader("crypted.cry"))
             {
-                string line;
-                while((line = sr.ReadLine()) != null)
-                {
-                    input += line;
-                }
+                input = sr.ReadLine();
             }
             string output = "";
             int j = 0;
