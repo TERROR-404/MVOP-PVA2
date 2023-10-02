@@ -22,31 +22,22 @@ namespace ConsoleApp1
             DateTime dt = DateTime.Now;
             while (height>-1)
             {
-                if (x==0)
-                {
-                    Console.Write("+");
-                    for (int i = 0; i < y; i++)
-                    {
-                        Console.Write('-');
-                    }
-                    Console.WriteLine("+");
-                }
-                if (height == Math.Round(x / 2d));
+                if (height == Math.Round(x / 2d))
                 {
                     Console.Write("|");
-                    for (int i = 0; i < y - Math.Round(head.Length/2d); i++)
+                    for (int i = 0; i < Math.Round((y - head.Length)/2d); i++)
                     {
                         Console.Write(' ');
                     }
                     Console.Write(head);
-                    for (int i = 0; i < y - Math.Floor(head.Length / 2d); i++)
+                    for (int i = 0; i < Math.Floor((y - head.Length) / 2d); i++)
                     {
                         Console.Write(' ');
                     }
                     Console.WriteLine("|");
 
                 }
-                if (height == 0)
+                else if (height == 0)
                 {
                     Console.Write("|");
                     string date = (dt.ToString("dd. MMMM yyyy"));
@@ -57,7 +48,7 @@ namespace ConsoleApp1
                     Console.Write(date);
                     Console.WriteLine("|");
                 }
-                if (height==x || height==-1)
+                if (height==x || height==0)
                 {
                     Console.Write("+");
                     for (int i = 0; i < y; i++)
