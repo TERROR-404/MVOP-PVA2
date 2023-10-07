@@ -1,0 +1,56 @@
+using System;
+namespace Message_Buffer
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            MessageBuffer m = new MessageBuffer(100);
+            m.Send("1");
+            m.Send("2");
+            m.Send("3");
+            m.Send("4");
+            m.Send("5");
+            m.Send("6");
+            m.Send("7");
+            m.Send("8");
+            m.Print();
+        }
+    }
+    public class MessageBuffer
+    {
+        private int index = 0;
+        private static int range;
+        private string[] messages;
+        public MessageBuffer(int value)
+        {
+            range = value;
+            messages = new string[range];
+        }
+        public void Send(string message)
+        {
+            if (index < range)
+            {
+                messages[index++] = message;
+            }
+            else
+            {
+                for (int i = 0; i < range-1; i++)
+                {
+                    messages[i] = messages[i+1];
+                }
+                messages[index-1] = message;
+            }
+        }
+        public void Print()
+        {
+            for (int i = range-1; i >= 0; i--)
+            {
+                if (messages[i] != null)
+                {
+                    Console.WriteLine(messages[i]);
+                }
+            }
+        }
+    }
+}
