@@ -5,16 +5,6 @@ namespace Message_Buffer
     {
         public static void Main(string[] args)
         {
-            MessageBuffer m = new MessageBuffer(100);
-            m.Send("1");
-            m.Send("2");
-            m.Send("3");
-            m.Send("4");
-            m.Send("5");
-            m.Send("6");
-            m.Send("7");
-            m.Send("8");
-            m.Print();
         }
     }
     public class MessageBuffer
@@ -44,7 +34,7 @@ namespace Message_Buffer
         }
         public void Print()
         {
-            for (int i = range-1; i >= 0; i--)
+            for (int i = index-1; i >= 0; i--)
             {
                 if (messages[i] != null)
                 {
