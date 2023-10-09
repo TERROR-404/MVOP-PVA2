@@ -9,7 +9,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Dictionary<string, int> d = new Dictionary<string, int>();
-            string[] input = File.ReadAllLines("Z:/rahul.txt");
+            string l = Environment.CurrentDirectory.ToString();
+            string[] input = File.ReadAllLines("rahul.txt");
             string text = "";
             for (int i = 0; i < input.Length; i++)
             {
