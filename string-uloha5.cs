@@ -10,7 +10,6 @@ namespace ConsoleApp1
         {
             Dictionary<string, int> d = new Dictionary<string, int>();
             string[] input = File.ReadAllLines("rahul.txt");
-            string text = "";
             for (int i = 0; i < input.Length; i++)
             {
                 string[] a = input[i].Split(" ");
