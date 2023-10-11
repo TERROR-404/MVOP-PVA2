@@ -8,15 +8,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-          string file = "rahul.txt";
+            string file = "rahul.txt";
             string text = File.ReadAllText(file);
-            Dictionary<string,List<int>> d = new Dictionary<string,List<int>>();
-            string[] t = text.Split('\n',' ');
-            foreach(var i in t)
+            Dictionary<string, List<int>> d = new Dictionary<string, List<int>>();
+            string[] t = text.Split(' ', '\n'); // \r odebere problémy s přidáváním \n za slova, když jsou na konci řádku, ale začne to přidávat nějaký mezer od nuly do 26
+            foreach (var i in t)
             {
-                if(d.ContainsKey(i))
+                if (d.ContainsKey(i))
                 {
-                    int a = text.IndexOf(i,d[i][d[i].Count-1]+1 , text.Length-(d[i][d[i].Count-1])-1);
+                    int a = text.IndexOf(i, d[i][d[i].Count - 1] + 1, text.Length - (d[i][d[i].Count - 1]) - 1);
                     d[i].Add(a);
                 }
                 else
@@ -24,21 +24,20 @@ namespace ConsoleApp1
                     List<int> l = new List<int>();
                     int a = text.IndexOf(i);
                     l.Add(a);
-                    d.Add(i,l);
+                    d.Add(i, l);
                 }
             }
-            using(StreamWriter sw = new StreamWriter(file))
+            string s = "\n\n";
+            foreach (var i in d)
             {
-                foreach(var i in d)
-            	{
-                    sw.Write(i.Key);
-                    foreach(var j in i.Value)
-                    {
-                        sw.Write(" {0},",j);
-                    }
-                    sw.WriteLine();
-        	    }
+                s+= i.Key;
+                foreach (var j in i.Value)
+                {
+                    s +=$" {j},";
+                }
+                s+="\n";
             }
+            File.AppendAllText(file, s);
         }
     }
 }
