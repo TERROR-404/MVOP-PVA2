@@ -1,107 +1,79 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-namespace ConsoleApp1
+namespace ConsoleApplication1
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            string fileName = "30x10.csv";
-            int x = 0;
-            int y = 0;
-            int numbers = 0;
-            string[] fileLines = File.ReadAllLines(fileName);
-            foreach (var item in fileLines)
+            string file = "30x10.csv";
+            string[] lines = File.ReadAllLines(file);
+            int sum = 0;
+            for (int i = 0; i < lines.Length; i++)
             {
-                string[] a = item.Split(',', ' ');
-                x = 0;
-                foreach (var j in a)
+                string[] c = lines[i].Split(',');
+                for (int j = 0; j < c.Length; j++)
                 {
-                    try
+                    int num;
+                    bool ex = int.TryParse(c[j], out num);
+                    if (ex)
                     {
-                        numbers += int.Parse(j);
+                        sum += num;
                     }
-                    catch (Exception)
+                    else
                     {
-                        int[] ex = { x, y };
-                        Console.WriteLine($"{ex[0]}, {ex[1]}, {j}");
-                        numbers += 0;
-                    }
-                    x++;
-                    if (x == a.Length - 1)
-                    {
-                        break;
+                        sum += 0;
                     }
                 }
-                y++;
             }
-            Console.WriteLine(numbers);
-            Table table = new Table();
-            Console.WriteLine(table.Sum(1,1,3,2));
-        }
-    }
-    public class Table
-    {
-        private int x = 0;
-        private int y = 0;
-        List<int> numbers = new List<int>();
+            Console.WriteLine(sum);
+            Console.WriteLine(Sum(1,1,3,2));
+            
+            // method
 
-        public int Sum(int y1, int x1, int y2, int x2)
+        }
+        public static int Sum(int y1,int x1,int y2,int x2)
         {
-            string fileName = "30x10.csv";
-            string[] fileLines = File.ReadAllLines(fileName);
-            bool breaking = false;
-            y = y1;
+            string file = "30x10.csv";
+            string[] lines = File.ReadAllLines(file);
             int sum = 0;
             try
             {
-                foreach (var item in fileLines)
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    string[] a = item.Split(',', ' ');
-                    x = x1;
-                    int xIndex = 0;
-                    foreach (var j in a)
+                    if (i<y1)
                     {
-                        if (xIndex < x)
+                        continue;
+                    }
+                    else if (i>y2)
+                    {
+                        break;
+                    }
+                    string[] c = lines[i].Split(',');
+                    for (int j = 0; j < c.Length; j++)
+                    {
+                        if (j<x1)
                         {
-                            xIndex++;
                             continue;
                         }
-                        int number = 0;
-                        if (breaking)
+                        else if (j>x2)
                         {
                             break;
                         }
-                        try
+                        int num;
+                        bool ex = int.TryParse(c[j], out num);
+                        if (ex)
                         {
-                            number = int.Parse(j);
+                            sum += num;
                         }
-                        catch (Exception)
+                        else
                         {
-                        }
-                        Console.WriteLine(number);
-                        sum +=number;
-                        if (y == y2 && x == x2)
-                        {
-                            breaking = true;
-                            break;
-                        }
-                        else if (x == x2)
-                        {
-                            break;
-                        }
-                        x++;
-                        if (x == a.Length - 1)
-                        {
-                            break;
+                            sum += 0;
                         }
                     }
-                    y++;
                 }
             }
-            catch (IndexOutOfRangeException e)
+            catch (Exception e)
             {
                 throw e;
             }
