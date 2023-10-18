@@ -34,6 +34,15 @@ namespace ConsoleApplication1
         }
         public static int Sum(int y1,int x1,int y2,int x2)
         {
+            if (y1>y2&&x1>x2)
+            {
+                int y = y1;
+                int x = x1;
+                y1 = y2;
+                x1 = x2;
+                y2 = y;
+                x2 = x;
+            }
             string file = "30x10.csv";
             string[] lines = File.ReadAllLines(file);
             int sum = 0;
