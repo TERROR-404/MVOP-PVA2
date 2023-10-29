@@ -1,0 +1,73 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s = Console.ReadLine();
+            string r="";
+            for (int i = s.Length-1; i > -1; i--)
+            {
+                r = r + s[i];
+            }
+            Console.WriteLine(r);
+            Hlavicka(20,20,"Asdp");
+        }
+
+        public static void Hlavicka(int y, int x, string head)
+        {
+            int height = x;
+            DateTime dt = DateTime.Now;
+            while (height>-1)
+            {
+                if (height == Math.Round(x / 2d))
+                {
+                    Console.Write("|");
+                    for (int i = 0; i < Math.Round((y - head.Length)/2d); i++)
+                    {
+                        Console.Write(' ');
+                    }
+                    Console.Write(head);
+                    for (int i = 0; i < Math.Floor((y - head.Length) / 2d); i++)
+                    {
+                        Console.Write(' ');
+                    }
+                    Console.WriteLine("|");
+
+                }
+                else if (height == 0)
+                {
+                    Console.Write("|");
+                    string date = (dt.ToString("dd. MMMM yyyy"));
+                    for (int i = 0; i < y-date.Length; i++)
+                    {
+                        Console.Write(' ');
+                    }
+                    Console.Write(date);
+                    Console.WriteLine("|");
+                }
+                if (height==x || height==0)
+                {
+                    Console.Write("+");
+                    for (int i = 0; i < y; i++)
+                    {
+                        Console.Write('-');
+                    }
+                    Console.WriteLine("+");
+                }
+                else
+                {
+                    Console.Write("|");
+                    for (int i = 0; i < y; i++)
+                    {
+                        Console.Write(' ');
+                    }
+                    Console.WriteLine("|");
+                }
+                height--;
+            }
+        }
+    }
+}
