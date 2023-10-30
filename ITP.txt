@@ -1,0 +1,17 @@
+PC stanice pro herní vyuití 35-40 tisíc
+
+Na hraní nároènıch her bude uivatel potøebovat dost vıkonnou grafickou kartu s oznaèením RTX, jeliko bude chtít v nìkterıch hrách pouívat raytracing.
+Bude také potøebovat dost vıkonnı procesor a dost pamì ram, minimálnì 64GB. Jako pevnı disk jsem zvolil SSD, které bude mít kapacitu alespoò 1TB, aby byly kam ty hra stahovat.
+Myslím si e v tomto pøípadì budeme do case investovat ménì, jeliko nám jde hlavnì o vıkon a aby se nám tam všechno vešlo, ne o vzhled.
+Pro základní desku platí podobná kritéria jako pro case, tedy abychom do ní mohli vše zapojit, na vzhled nehledì.
+Chladiè procesoru a zdroj vybereme na základì parametrù ostatních komponentù.
+Operaèní systém, kterı se nejvíce pouívá pro hraní her je Windows, take tam nejlépe budeme chtít Windows 11.
+
+procesor - Intel Core i9-12900
+grafická karta - GIGABYTE GeForce RTX 4070 WINDFORCE OC 12G, 12GB GDDR6X
+základní deska - 
+case - 
+pevnı disk - Kingston NV2, M.2 - 1TB
+operaèní pamì - 
+zdroj - 
+chladiè procesoru - 
