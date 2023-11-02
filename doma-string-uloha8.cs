@@ -18,11 +18,7 @@ namespace ConsoleApplication1
         public static bool IsMail(string s)
         {
             Regex r = new Regex(@"^\w+(\.\w+)*@(\w+\.)+\w{2,4}$");
-            if (r.IsMatch(s))
-            {
-                return true;
-            }
-            return false;
+            return r.IsMatch(s);
         }
     }
 }
