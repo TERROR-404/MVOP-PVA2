@@ -1,0 +1,7 @@
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\bin\Debug\doma-WPF-uloha4-konzole.exe.config
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\bin\Debug\doma-WPF-uloha4-konzole.exe
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\bin\Debug\doma-WPF-uloha4-konzole.pdb
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\obj\Debug\doma-WPF-uloha4-konzole.csproj.AssemblyReference.cache
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\obj\Debug\doma-WPF-uloha4-konzole.csproj.CoreCompileInputs.cache
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\obj\Debug\doma-WPF-uloha4-konzole.exe
+C:\Users\cmerd\source\repos\doma-WPF-uloha4\doma-WPF-uloha4-konzole\obj\Debug\doma-WPF-uloha4-konzole.pdb

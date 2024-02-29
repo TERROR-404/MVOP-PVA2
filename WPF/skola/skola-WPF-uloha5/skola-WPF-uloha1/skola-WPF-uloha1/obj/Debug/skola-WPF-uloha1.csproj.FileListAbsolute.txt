@@ -1,0 +1,15 @@
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\bin\Debug\skola-WPF-uloha1.exe.config
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\bin\Debug\skola-WPF-uloha1.exe
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\bin\Debug\skola-WPF-uloha1.pdb
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.csproj.AssemblyReference.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\MainWindow.g.cs
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\App.g.cs
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1_MarkupCompile.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1_MarkupCompile.lref
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\MainWindow.baml
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.g.resources
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola_WPF_uloha1.Properties.Resources.resources
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.csproj.GenerateResource.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.csproj.CoreCompileInputs.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.exe
+C:\Users\cmerda.bo.2021\source\repos\skola-WPF-uloha1\skola-WPF-uloha1\obj\Debug\skola-WPF-uloha1.pdb
