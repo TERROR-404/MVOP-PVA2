@@ -1,0 +1,93 @@
+﻿<Window x:Class="Databáze_kuchyňských_receptů.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Databáze_kuchyňských_receptů"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#e4eaff">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Grid.Column="1" Content="Přihlašovací jméno:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="Heslo:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="1" Grid.Column="3" Text="Přihlašovací jméno" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="#c9d5ff" BorderBrush="Black" BorderThickness="1" Padding="5,0,5,0"/>
+            <TextBox Grid.Row="3" Grid.Column="3" Text="Heslo" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="#c9d5ff" BorderBrush="Black" BorderThickness="1" Padding="5,0,5,0"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Grid.Column="1" Content="Přihlásit se" Foreground="White" Background="#272643">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+            CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="3" Content="Zaregistrovat" Foreground="White" Background="#272643">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Content="Pokračovat nepřihlášen" Foreground="White" Background="#272643">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
