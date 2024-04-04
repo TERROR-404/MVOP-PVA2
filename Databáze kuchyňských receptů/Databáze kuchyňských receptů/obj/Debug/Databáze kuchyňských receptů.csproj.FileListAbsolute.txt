@@ -1,0 +1,19 @@
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.exe.config
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.exe
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.pdb
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.AssemblyReference.cache
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\MainWindow.g.cs
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\App.g.cs
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů_MarkupCompile.cache
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů_MarkupCompile.lref
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\MainWindow.baml
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.g.resources
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze_kuchyňských_receptů.Properties.Resources.resources
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.GenerateResource.cache
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.CoreCompileInputs.cache
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.exe
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.pdb
+C:\Users\cmerd\source\repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Login.g.cs
+C:\Users\cmerd\source\repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Login.baml
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.g.cs
+C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.baml
