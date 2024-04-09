@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Databáze_kuchyňských_receptů"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,16 +22,16 @@
         <Grid Grid.Column="1" Grid.Row="1" Background="#e4eaff">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="18*"/>
+                <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <!-- <Canvas Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                 <Canvas.Background> -->
-            <!--  <ImageBrush ImageSource="./Magnifying_glass.png"/> -->
-            <!-- </Canvas.Background> -->
-            <!-- </Canvas> -->
+            <Canvas Name="Search" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonUp="Search_MouseLeftButtonUp">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/mg.png"/>
+                </Canvas.Background>
+            </Canvas>
             <TextBox Name="Find" Grid.Row="0" Grid.Column="1" Background="#e4eaff" Text="Vyhledat recept" VerticalContentAlignment="Center"/>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="3">
@@ -58,9 +58,11 @@
                 <Label Grid.Row="0" Grid.Column="0" Content="Vegetarián" Margin="20,0,0,0" VerticalContentAlignment="Center"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="Seřadit podle:" FontSize="10" VerticalContentAlignment="Center"/>
                 <ComboBox Name="Sort" Grid.Row="2" Grid.Column="0" Margin="75,0,0,0">
-                    <ComboBoxItem Content="Coffie"></ComboBoxItem>
+                    <ComboBoxItem Content="data přidání"></ComboBoxItem>
+                    <ComboBoxItem Content="autorů abecedně"></ComboBoxItem>
+                    <ComboBoxItem Content="názvu abecedně"></ComboBoxItem>
                 </ComboBox>
-                <Button Name="Add" Grid.Row="4" Grid.Column="0" Content="Přidat recept" Foreground="White" Background="#272643" Click="Add_Click">
+                <Button Name="Add" Grid.Row="4" Grid.Column="0" Content="Přidat recept" Click="Add_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}" CornerRadius="10">
@@ -75,4 +77,10 @@
             </ScrollViewer>
         </Grid>
     </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#272643"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
 </Window>

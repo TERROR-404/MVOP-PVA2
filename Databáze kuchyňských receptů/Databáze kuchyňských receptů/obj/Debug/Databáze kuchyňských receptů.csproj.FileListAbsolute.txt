@@ -17,3 +17,41 @@ C:\Users\cmerd\source\repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských recept�
 C:\Users\cmerd\source\repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Login.baml
 C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.g.cs
 C:\Users\cmerd\Source\Repos\TERROR-404\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.baml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.exe.config
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.exe
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Databáze kuchyňských receptů.pdb
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.AssemblyReference.cache
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Login.g.cs
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\MainWindow.g.cs
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.g.cs
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\App.g.cs
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů_MarkupCompile.cache
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů_MarkupCompile.lref
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Login.baml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\MainWindow.baml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Recipe.baml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.g.resources
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze_kuchyňských_receptů.Properties.Resources.resources
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.GenerateResource.cache
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.csproj.CoreCompileInputs.cache
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.exe
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze kuchyňských receptů.pdb
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Buffers.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Memory.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Text.Json.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.ValueTuple.dll
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Buffers.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Memory.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Text.Json.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.ValueTuple.xml
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze.B4F90735.Up2Date
