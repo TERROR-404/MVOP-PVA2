@@ -22,6 +22,9 @@ namespace Databáze_kuchyňských_receptů
     /// </summary>
     public partial class Recipe : Window
     {
+        public bool changeRecipe;
+        public Grid changeGrid;
+        public string authorName;
         public Recipe()
         {
             InitializeComponent();
@@ -29,24 +32,47 @@ namespace Databáze_kuchyňských_receptů
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Add_Recipe(Title.Text, Ingredients.Text, Process.Text);
-
-            RecipesClass r = new RecipesClass
-            {
-                Title = Title.Text,
-                Ingredients = Ingredients.Text,
-                Process = Process.Text
-            };
-            string jsonString = JsonSerializer.Serialize(r);
-
             string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            if (changeRecipe)
             {
-                writer.WriteLine(jsonString);
+                if (Application.Current.MainWindow is MainWindow main)
+                {
+                    main.Recipes.Children.Remove(changeGrid);
+                }
+                else
+                {
+                    throw new Exception("Unexpected application window.");
+                }
+                List<string> recipes = new List<string>();
+                using (StreamReader reader = new StreamReader(filePath, true))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                        if (recipesClass.Title != changeGrid.Name)
+                        {
+                            recipes.Add(line);
+                        }
+                    }
+                }
+                File.WriteAllLines(filePath, recipes);
             }
-
+                RecipesClass r = new RecipesClass
+                {
+                    Title = Title.Text,
+                    Ingredients = Ingredients.Text,
+                    Process = Process.Text,
+                    Author = authorName
+                };
+                string jsonString = JsonSerializer.Serialize(r);
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLine(jsonString);
+                }
+                Add_Recipe(Title.Text, Ingredients.Text, Process.Text, authorName, authorName);
         }
-        public void Add_Recipe(string titleText, string ingredientsText, string processText)
+        public void Add_Recipe(string titleText, string ingredientsText, string processText, string authorText, string loggedAuthor)
         {
             Grid newRecipe = new Grid();
             newRecipe.Background = new SolidColorBrush(Color.FromRgb(201, 213, 255));
@@ -110,7 +136,7 @@ namespace Databáze_kuchyňských_receptů
             Grid.SetColumn(author, 4);
             Grid.SetColumnSpan(author, 2);
             Grid.SetRow(author, 1);
-            author.Content = "Autor:";
+            author.Content = authorText;
             newRecipe.Children.Add(author);
             Label titleIngredients = new Label();
             Grid.SetColumn(titleIngredients, 1);
@@ -147,17 +173,6 @@ namespace Databáze_kuchyňských_receptů
             Grid.SetRow(delete, 5);
             delete.FontWeight = FontWeights.Bold;
             delete.Content = "Smazat";
-
-            if (Application.Current.MainWindow is MainWindow mainWindow)
-            {
-                delete.Click += new RoutedEventHandler(mainWindow.Delete_Click);
-            }
-            else
-            {
-                throw new Exception("Unexpected application window.");
-            }
-
-            newRecipe.Children.Add(delete);
             Button change = new Button();
             change.Height = 30;
             change.Width = 100;
@@ -167,12 +182,68 @@ namespace Databáze_kuchyňských_receptů
             Grid.SetRow(change, 6);
             change.FontWeight = FontWeights.Bold;
             change.Content = "Upravit";
+
+            if (Application.Current.MainWindow is MainWindow mainWindow)
+            {
+                if (mainWindow.logged)
+                {
+                    if (authorText == loggedAuthor)
+                    {
+                        delete.Click += new RoutedEventHandler(mainWindow.Delete_Click);
+                        change.Click += new RoutedEventHandler(mainWindow.Change_Click);
+                        delete.IsEnabled = true;
+                        change.IsEnabled = true;
+                    }
+                    else
+                    {
+                        delete.IsEnabled = false;
+                        change.IsEnabled = false;
+                    }
+                }
+                else
+                {
+                    delete.IsEnabled = false;
+                    change.IsEnabled = false;
+                }
+            }
+            else
+            {
+                throw new Exception("Unexpected application window.");
+            }
+
+            newRecipe.Children.Add(delete);
             newRecipe.Children.Add(change);
-            newRecipe.Name = titleText;
+            newRecipe.Name = titleText.ToString();
 
             if (Application.Current.MainWindow is MainWindow main)
             {
                 main.Recipes.Children.Add(newRecipe);
+                main.IsEnabled = true;
+                this.Close();
+            }
+            else
+            {
+                throw new Exception("Unexpected application window.");
+            }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow is MainWindow main)
+            {
+                main.IsEnabled = true;
+                this.Close();
+            }
+            else
+            {
+                throw new Exception("Unexpected application window.");
+            }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (Application.Current.MainWindow is MainWindow main)
+            {
                 main.IsEnabled = true;
                 this.Close();
             }

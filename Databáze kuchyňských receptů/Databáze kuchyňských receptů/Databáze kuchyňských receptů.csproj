@@ -87,6 +87,7 @@
       <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
     <Compile Include="RecipesClass.cs" />
+    <Compile Include="UserClass.cs" />
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

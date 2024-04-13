@@ -55,3 +55,5 @@ C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Datab
 C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\bin\Debug\System.ValueTuple.xml
 C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\Databáze.B4F90735.Up2Date
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\cmerd\Documents\GitHub\MVOP-PVA2\Databáze kuchyňských receptů\Databáze kuchyňských receptů\obj\Debug\App.baml

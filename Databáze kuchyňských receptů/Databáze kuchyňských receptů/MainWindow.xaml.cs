@@ -24,12 +24,18 @@ namespace Databáze_kuchyňských_receptů
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool logged;
+        public string author;
         public MainWindow()
         {
             InitializeComponent();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            if (!logged)
+            {
+                Add.IsEnabled = false;
+            }
             string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
             using (StreamReader reader = new StreamReader(filePath, true))
             {
@@ -38,7 +44,7 @@ namespace Databáze_kuchyňských_receptů
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
                     Recipe recipe = new Recipe();
-                    recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process);
+                    recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author);
                 }
             }
         }
@@ -46,6 +52,8 @@ namespace Databáze_kuchyňských_receptů
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Recipe R = new Recipe();
+            R.changeRecipe = false;
+            R.authorName = author;
             R.Show();
             this.IsEnabled = false;
         }
@@ -76,7 +84,40 @@ namespace Databáze_kuchyňských_receptů
                     }
                 }
             }
-                File.WriteAllLines(filePath, recipes);
+            File.WriteAllLines(filePath, recipes);
+        }
+        public void Change_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            DependencyObject parentObject = VisualTreeHelper.GetParent(button);
+            Grid parentGrid = (Grid)parentObject;
+            string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
+            Recipe R = new Recipe();
+            R.changeRecipe = true;
+            using (StreamReader reader = new StreamReader(filePath, true))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                    if (recipesClass.Title == parentGrid.Name)
+                    {
+                        R.Title.Text = recipesClass.Title;
+                        R.Ingredients.Text = recipesClass.Ingredients;
+                        R.Process.Text = recipesClass.Process;
+                        break;
+                    }
+                }
+            }
+            R.changeGrid = parentGrid;
+            R.authorName = author;
+            R.Show();
+            this.IsEnabled = false;
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
