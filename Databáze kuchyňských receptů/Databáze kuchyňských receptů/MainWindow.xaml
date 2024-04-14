@@ -32,7 +32,7 @@
                     <ImageBrush ImageSource="/mg.png"/>
                 </Canvas.Background>
             </Canvas>
-            <TextBox Name="Find" Grid.Row="0" Grid.Column="1" Background="#e4eaff" Text="Vyhledat recept" VerticalContentAlignment="Center"/>
+            <TextBox Name="Find" Grid.Row="0" Grid.Column="1" Background="#e4eaff" VerticalContentAlignment="Center"/>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="3">
             <Grid.ColumnDefinitions>
@@ -54,10 +54,10 @@
                     <RowDefinition Height="15*"/>
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
-                <CheckBox Name="Vegan" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <CheckBox Name="Vegan" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Checked="Vegan_Checked" Unchecked="Vegan_Unchecked"/>
                 <Label Grid.Row="0" Grid.Column="0" Content="Vegetarián" Margin="20,0,0,0" VerticalContentAlignment="Center"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="Seřadit podle:" FontSize="10" VerticalContentAlignment="Center"/>
-                <ComboBox Name="Sort" Grid.Row="2" Grid.Column="0" Margin="75,0,0,0">
+                <ComboBox Name="Sort" Grid.Row="2" Grid.Column="0" Margin="75,0,0,0" SelectionChanged="Sort_SelectionChanged">
                     <ComboBoxItem Content="data přidání"></ComboBoxItem>
                     <ComboBoxItem Content="autorů abecedně"></ComboBoxItem>
                     <ComboBoxItem Content="názvu abecedně"></ComboBoxItem>

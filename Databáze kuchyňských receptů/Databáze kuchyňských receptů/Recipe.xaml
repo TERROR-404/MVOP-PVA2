@@ -54,8 +54,12 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <TextBox Name="Title" Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Bold" Background="#e4eaff"/>
-        <Label Name="Author" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Content="Autor:" FontSize="15"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Název:" FontSize="15" FontWeight="Bold"/>
+        <TextBox Name="Title" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="70,0,100,0" FontSize="20" FontWeight="Bold" Background="#e4eaff"/>
+        <Label Name="Error" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" FontWeight="Bold"/>
+        <Label Name="Author" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" FontSize="15"/>
+        <CheckBox Name="Vegan" Grid.Row="4" Grid.Column="4" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" FontSize="15" Content="Vegetarián" Margin="20,0,0,0" VerticalContentAlignment="Center"/>
         <Label Grid.Row="3" Grid.Column="1" Content="Ingredience:" FontSize="15" FontWeight="Bold"/>
         <Label Grid.Row="3" Grid.Column="3" Content="Postup:" FontSize="15" FontWeight="Bold"/>
         <TextBox Name="Ingredients" Grid.Row="5" Grid.Column="1" Background="#e4eaff"/>

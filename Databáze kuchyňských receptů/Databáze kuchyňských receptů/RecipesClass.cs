@@ -12,5 +12,7 @@ namespace Databáze_kuchyňských_receptů
         public string Ingredients { get; set; }
         public string Process { get; set; }
         public string Author { get; set; }
+        public bool Vegetarian { get; set; }
+        public DateTime Time { get; set; }
     }
 }

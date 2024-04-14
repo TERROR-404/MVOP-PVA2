@@ -26,27 +26,30 @@ namespace Databáze_kuchyňských_receptů
     {
         public bool logged;
         public string author;
+        public string recipesFilePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
+        public List<Grid> recipesChildren;
         public MainWindow()
         {
             InitializeComponent();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            recipesChildren = Recipes.Children.OfType<Grid>().ToList();
             if (!logged)
             {
                 Add.IsEnabled = false;
             }
-            string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
-            using (StreamReader reader = new StreamReader(filePath, true))
+            using (StreamReader reader = new StreamReader(recipesFilePath, true))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
                     Recipe recipe = new Recipe();
-                    recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author);
+                    recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author, recipesClass.Vegetarian, recipesClass.Time, true);
                 }
             }
+            recipesChildren = Recipes.Children.OfType<Grid>().ToList();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -60,7 +63,46 @@ namespace Databáze_kuchyňských_receptů
 
         private void Search_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            
+            Searching();
+        }
+        public void Searching()
+        {
+            Vegan.IsChecked = false;
+            string searching = Find.Text;
+            Recipes.Children.Clear();
+            if (searching == "")
+            {
+                using (StreamReader reader = new StreamReader(recipesFilePath, true))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                        Recipe recipe = new Recipe();
+                        recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author, recipesClass.Vegetarian, recipesClass.Time, true);
+                    }
+                }
+            }
+            else
+            {
+                using (StreamReader reader = new StreamReader(recipesFilePath, true))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                        if (recipesClass.Title == searching || recipesClass.Author == searching)
+                        {
+                            Recipe recipe = new Recipe();
+                            recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author, recipesClass.Vegetarian, recipesClass.Time, true);
+                        }
+                    }
+                }
+            }
+            if (Sort.SelectedValue != null)
+            {
+                Sort_Recipes();
+            }
         }
 
         public void Delete_Click(object sender, RoutedEventArgs e)
@@ -69,42 +111,42 @@ namespace Databáze_kuchyňských_receptů
             DependencyObject parentObject = VisualTreeHelper.GetParent(button);
             Grid parentGrid = (Grid)parentObject;
             Recipes.Children.Remove(parentGrid);
+            recipesChildren.Remove(parentGrid);
 
-            string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
             List<string> recipes = new List<string>();
-            using (StreamReader reader = new StreamReader(filePath, true))
+            using (StreamReader reader = new StreamReader(recipesFilePath, true))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                    if (recipesClass.Title != parentGrid.Name)
+                    if ($"{recipesClass.Author}_{recipesClass.Title}_{recipesClass.Time.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{recipesClass.Vegetarian}" != parentGrid.Name)
                     {
                         recipes.Add(line);
                     }
                 }
             }
-            File.WriteAllLines(filePath, recipes);
+            File.WriteAllLines(recipesFilePath, recipes);
         }
         public void Change_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             DependencyObject parentObject = VisualTreeHelper.GetParent(button);
             Grid parentGrid = (Grid)parentObject;
-            string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
             Recipe R = new Recipe();
             R.changeRecipe = true;
-            using (StreamReader reader = new StreamReader(filePath, true))
+            using (StreamReader reader = new StreamReader(recipesFilePath, true))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                    if (recipesClass.Title == parentGrid.Name)
+                    if ($"{recipesClass.Author}_{recipesClass.Title}_{recipesClass.Time.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{recipesClass.Vegetarian}" == parentGrid.Name)
                     {
                         R.Title.Text = recipesClass.Title;
                         R.Ingredients.Text = recipesClass.Ingredients;
                         R.Process.Text = recipesClass.Process;
+                        R.Vegan.IsChecked = recipesClass.Vegetarian;
                         break;
                     }
                 }
@@ -118,6 +160,69 @@ namespace Databáze_kuchyňských_receptů
         private void Window_Closed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Vegan_Checked(object sender, RoutedEventArgs e)
+        {
+            recipesChildren = Recipes.Children.OfType<Grid>().ToList();
+            Recipes.Children.Clear();
+            foreach (var grid in recipesChildren)
+            {
+                if (bool.Parse(grid.Name.Split('_')[3]))
+                {
+                    Recipes.Children.Add(grid);
+                }
+            }
+        }
+
+        private void Vegan_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Recipes.Children.Clear();
+            foreach (var grid in recipesChildren)
+            {
+                Recipes.Children.Add(grid);
+            }
+        }
+
+        private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Sort_Recipes();
+        }
+        public void Sort_Recipes()
+        {
+            if (Sort.SelectedValue != null)
+            {
+                recipesChildren = Recipes.Children.OfType<Grid>().ToList();
+
+                string sortBy = Sort.SelectedValue.ToString().Replace("System.Windows.Controls.ComboBoxItem: ", "");
+                switch (sortBy)
+                {
+                    case "data přidání":
+                        List<Grid> sortedTimes = recipesChildren.OrderBy(grid => DateTime.Parse(grid.Name.Split('_')[2].Replace("a",":").Replace("b",".").Replace("c"," "))).ToList();
+                        Recipes.Children.Clear();
+                        foreach (var grid in sortedTimes)
+                        {
+                            Recipes.Children.Add(grid);
+                        }
+                        break;
+                    case "názvu abecedně":
+                        List<Grid> sortedTitles = recipesChildren.OrderBy(grid => grid.Name.Split('_')[1]).ToList();
+                        Recipes.Children.Clear();
+                        foreach (var grid in sortedTitles)
+                        {
+                            Recipes.Children.Add(grid);
+                        }
+                        break;
+                    case "autorů abecedně":
+                        List<Grid> sortedAuthors = recipesChildren.OrderBy(grid => grid.Name).ToList();
+                        Recipes.Children.Clear();
+                        foreach (var grid in sortedAuthors)
+                        {
+                            Recipes.Children.Add(grid);
+                        }
+                        break;
+                }
+            }
         }
     }
 }

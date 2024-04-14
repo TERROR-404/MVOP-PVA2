@@ -25,6 +25,7 @@ namespace Databáze_kuchyňských_receptů
         public bool changeRecipe;
         public Grid changeGrid;
         public string authorName;
+        public string recipesFilePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
         public Recipe()
         {
             InitializeComponent();
@@ -32,198 +33,224 @@ namespace Databáze_kuchyňských_receptů
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
-            if (changeRecipe)
+            if (Title.Text == "")
+            {
+                Error.Content = "Prosím napište jméno receptu!";
+            }
+            else
             {
                 if (Application.Current.MainWindow is MainWindow main)
                 {
-                    main.Recipes.Children.Remove(changeGrid);
+                    if (changeRecipe)
+                    {
+                        main.Recipes.Children.Remove(changeGrid);
+                        List<string> recipes = new List<string>();
+                        using (StreamReader reader = new StreamReader(recipesFilePath, true))
+                        {
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                                if ($"{recipesClass.Author}_{recipesClass.Title}_{recipesClass.Time.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{recipesClass.Vegetarian}" != changeGrid.Name)
+                                {
+                                    recipes.Add(line);
+                                }
+                            }
+                        }
+                        File.WriteAllLines(recipesFilePath, recipes);
+                    }
+                    bool vege = false;
+                    if (Vegan.IsChecked == true)
+                    {
+                        vege = true;
+                    }
+                    DateTime time = DateTime.Now;
+                    RecipesClass r = new RecipesClass
+                    {
+                        Title = Title.Text,
+                        Ingredients = Ingredients.Text,
+                        Process = Process.Text,
+                        Author = authorName,
+                        Vegetarian = vege,
+                        Time = time
+                    };
+                    string jsonString = JsonSerializer.Serialize(r);
+                    using (StreamWriter writer = new StreamWriter(recipesFilePath, true))
+                    {
+                        writer.WriteLine(jsonString);
+                    }
+                    Add_Recipe(Title.Text, Ingredients.Text, Process.Text, authorName, authorName, vege, time, false);
+                    if (main.Sort.SelectedValue != null)
+                    {
+                        main.Sort_Recipes();
+                    }
                 }
                 else
                 {
                     throw new Exception("Unexpected application window.");
                 }
-                List<string> recipes = new List<string>();
-                using (StreamReader reader = new StreamReader(filePath, true))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                        if (recipesClass.Title != changeGrid.Name)
-                        {
-                            recipes.Add(line);
-                        }
-                    }
-                }
-                File.WriteAllLines(filePath, recipes);
             }
-                RecipesClass r = new RecipesClass
-                {
-                    Title = Title.Text,
-                    Ingredients = Ingredients.Text,
-                    Process = Process.Text,
-                    Author = authorName
-                };
-                string jsonString = JsonSerializer.Serialize(r);
-                using (StreamWriter writer = new StreamWriter(filePath, true))
-                {
-                    writer.WriteLine(jsonString);
-                }
-                Add_Recipe(Title.Text, Ingredients.Text, Process.Text, authorName, authorName);
         }
-        public void Add_Recipe(string titleText, string ingredientsText, string processText, string authorText, string loggedAuthor)
+        public void Add_Recipe(string titleText, string ingredientsText, string processText, string authorText, string loggedAuthor, bool vegan, DateTime date, bool loading)
         {
-            Grid newRecipe = new Grid();
-            newRecipe.Background = new SolidColorBrush(Color.FromRgb(201, 213, 255));
-            newRecipe.Margin = new Thickness(0, 10, 0, 0);
-            newRecipe.Width = 500;
-            newRecipe.Height = 282;
-            newRecipe.HorizontalAlignment = HorizontalAlignment.Center;
-            newRecipe.VerticalAlignment = VerticalAlignment.Center;
-            ColumnDefinition colDef1 = new ColumnDefinition();
-            colDef1.Width = new GridLength(0.5, GridUnitType.Star);
-            ColumnDefinition colDef2 = new ColumnDefinition();
-            colDef2.Width = new GridLength(8, GridUnitType.Star);
-            ColumnDefinition colDef3 = new ColumnDefinition();
-            colDef3.Width = new GridLength(2, GridUnitType.Star);
-            ColumnDefinition colDef4 = new ColumnDefinition();
-            colDef4.Width = new GridLength(10, GridUnitType.Star);
-            ColumnDefinition colDef5 = new ColumnDefinition();
-            colDef5.Width = new GridLength(1, GridUnitType.Star);
-            ColumnDefinition colDef6 = new ColumnDefinition();
-            colDef6.Width = new GridLength(3, GridUnitType.Star);
-            ColumnDefinition colDef7 = new ColumnDefinition();
-            colDef7.Width = new GridLength(0.5, GridUnitType.Star);
-            newRecipe.ColumnDefinitions.Add(colDef1);
-            newRecipe.ColumnDefinitions.Add(colDef2);
-            newRecipe.ColumnDefinitions.Add(colDef3);
-            newRecipe.ColumnDefinitions.Add(colDef4);
-            newRecipe.ColumnDefinitions.Add(colDef5);
-            newRecipe.ColumnDefinitions.Add(colDef6);
-            newRecipe.ColumnDefinitions.Add(colDef7);
-            RowDefinition rowDef1 = new RowDefinition();
-            rowDef1.Height = new GridLength(0.2, GridUnitType.Star);
-            RowDefinition rowDef2 = new RowDefinition();
-            rowDef2.Height = new GridLength(1, GridUnitType.Star);
-            RowDefinition rowDef3 = new RowDefinition();
-            rowDef3.Height = new GridLength(0.2, GridUnitType.Star);
-            RowDefinition rowDef4 = new RowDefinition();
-            rowDef4.Height = new GridLength(1, GridUnitType.Star);
-            RowDefinition rowDef5 = new RowDefinition();
-            rowDef5.Height = new GridLength(0.2, GridUnitType.Star);
-            RowDefinition rowDef6 = new RowDefinition();
-            rowDef6.Height = new GridLength(4, GridUnitType.Star);
-            RowDefinition rowDef7 = new RowDefinition();
-            rowDef7.Height = new GridLength(4, GridUnitType.Star);
-            RowDefinition rowDef8 = new RowDefinition();
-            rowDef8.Height = new GridLength(0.2, GridUnitType.Star);
-            newRecipe.RowDefinitions.Add(rowDef1);
-            newRecipe.RowDefinitions.Add(rowDef2);
-            newRecipe.RowDefinitions.Add(rowDef3);
-            newRecipe.RowDefinitions.Add(rowDef4);
-            newRecipe.RowDefinitions.Add(rowDef5);
-            newRecipe.RowDefinitions.Add(rowDef6);
-            newRecipe.RowDefinitions.Add(rowDef7);
-            newRecipe.RowDefinitions.Add(rowDef8);
-            Label title = new Label();
-            Grid.SetColumn(title, 1);
-            Grid.SetRow(title, 1);
-            title.FontWeight = FontWeights.Bold;
-            title.Content = titleText;
-            newRecipe.Children.Add(title);
-            Label author = new Label();
-            Grid.SetColumn(author, 4);
-            Grid.SetColumnSpan(author, 2);
-            Grid.SetRow(author, 1);
-            author.Content = authorText;
-            newRecipe.Children.Add(author);
-            Label titleIngredients = new Label();
-            Grid.SetColumn(titleIngredients, 1);
-            Grid.SetRow(titleIngredients, 3);
-            titleIngredients.Content = "Ingredience:";
-            newRecipe.Children.Add(titleIngredients);
-            Label titleProcess = new Label();
-            Grid.SetColumn(titleProcess, 3);
-            Grid.SetRow(titleProcess, 3);
-            titleProcess.Content = "Postup:";
-            newRecipe.Children.Add(titleProcess);
-            Label ingredients = new Label();
-            Grid.SetColumn(ingredients, 1);
-            Grid.SetRow(ingredients, 5);
-            Grid.SetRowSpan(ingredients, 2);
-            ingredients.BorderBrush = Brushes.Black;
-            ingredients.BorderThickness = new Thickness(1);
-            ingredients.Content = ingredientsText;
-            newRecipe.Children.Add(ingredients);
-            Label process = new Label();
-            Grid.SetColumn(process, 3);
-            Grid.SetRow(process, 5);
-            Grid.SetRowSpan(process, 2);
-            process.BorderBrush = Brushes.Black;
-            process.BorderThickness = new Thickness(1);
-            process.Content = processText;
-            newRecipe.Children.Add(process);
-            Button delete = new Button();
-            delete.Height = 30;
-            delete.Width = 100;
-            delete.VerticalAlignment = VerticalAlignment.Bottom;
-            delete.HorizontalAlignment = HorizontalAlignment.Center;
-            Grid.SetColumn(delete, 5);
-            Grid.SetRow(delete, 5);
-            delete.FontWeight = FontWeights.Bold;
-            delete.Content = "Smazat";
-            Button change = new Button();
-            change.Height = 30;
-            change.Width = 100;
-            change.VerticalAlignment = VerticalAlignment.Center;
-            change.HorizontalAlignment = HorizontalAlignment.Center;
-            Grid.SetColumn(change, 5);
-            Grid.SetRow(change, 6);
-            change.FontWeight = FontWeights.Bold;
-            change.Content = "Upravit";
-
-            if (Application.Current.MainWindow is MainWindow mainWindow)
+            try
             {
-                if (mainWindow.logged)
+                Grid newRecipe = new Grid();
+                newRecipe.Background = new SolidColorBrush(Color.FromRgb(201, 213, 255));
+                newRecipe.Margin = new Thickness(0, 10, 0, 0);
+                newRecipe.Width = 500;
+                newRecipe.Height = 282;
+                newRecipe.HorizontalAlignment = HorizontalAlignment.Center;
+                newRecipe.VerticalAlignment = VerticalAlignment.Center;
+                ColumnDefinition colDef1 = new ColumnDefinition();
+                colDef1.Width = new GridLength(0.5, GridUnitType.Star);
+                ColumnDefinition colDef2 = new ColumnDefinition();
+                colDef2.Width = new GridLength(8, GridUnitType.Star);
+                ColumnDefinition colDef3 = new ColumnDefinition();
+                colDef3.Width = new GridLength(2, GridUnitType.Star);
+                ColumnDefinition colDef4 = new ColumnDefinition();
+                colDef4.Width = new GridLength(10, GridUnitType.Star);
+                ColumnDefinition colDef5 = new ColumnDefinition();
+                colDef5.Width = new GridLength(1, GridUnitType.Star);
+                ColumnDefinition colDef6 = new ColumnDefinition();
+                colDef6.Width = new GridLength(3, GridUnitType.Star);
+                ColumnDefinition colDef7 = new ColumnDefinition();
+                colDef7.Width = new GridLength(0.5, GridUnitType.Star);
+                newRecipe.ColumnDefinitions.Add(colDef1);
+                newRecipe.ColumnDefinitions.Add(colDef2);
+                newRecipe.ColumnDefinitions.Add(colDef3);
+                newRecipe.ColumnDefinitions.Add(colDef4);
+                newRecipe.ColumnDefinitions.Add(colDef5);
+                newRecipe.ColumnDefinitions.Add(colDef6);
+                newRecipe.ColumnDefinitions.Add(colDef7);
+                RowDefinition rowDef1 = new RowDefinition();
+                rowDef1.Height = new GridLength(0.2, GridUnitType.Star);
+                RowDefinition rowDef2 = new RowDefinition();
+                rowDef2.Height = new GridLength(1, GridUnitType.Star);
+                RowDefinition rowDef3 = new RowDefinition();
+                rowDef3.Height = new GridLength(0.2, GridUnitType.Star);
+                RowDefinition rowDef4 = new RowDefinition();
+                rowDef4.Height = new GridLength(1, GridUnitType.Star);
+                RowDefinition rowDef5 = new RowDefinition();
+                rowDef5.Height = new GridLength(0.2, GridUnitType.Star);
+                RowDefinition rowDef6 = new RowDefinition();
+                rowDef6.Height = new GridLength(4, GridUnitType.Star);
+                RowDefinition rowDef7 = new RowDefinition();
+                rowDef7.Height = new GridLength(4, GridUnitType.Star);
+                RowDefinition rowDef8 = new RowDefinition();
+                rowDef8.Height = new GridLength(0.2, GridUnitType.Star);
+                newRecipe.RowDefinitions.Add(rowDef1);
+                newRecipe.RowDefinitions.Add(rowDef2);
+                newRecipe.RowDefinitions.Add(rowDef3);
+                newRecipe.RowDefinitions.Add(rowDef4);
+                newRecipe.RowDefinitions.Add(rowDef5);
+                newRecipe.RowDefinitions.Add(rowDef6);
+                newRecipe.RowDefinitions.Add(rowDef7);
+                newRecipe.RowDefinitions.Add(rowDef8);
+                Label title = new Label();
+                Grid.SetColumn(title, 1);
+                Grid.SetRow(title, 1);
+                title.FontWeight = FontWeights.Bold;
+                title.Content = titleText;
+                newRecipe.Children.Add(title);
+                Label author = new Label();
+                Grid.SetColumn(author, 4);
+                Grid.SetColumnSpan(author, 2);
+                Grid.SetRow(author, 1);
+                author.Content = authorText;
+                newRecipe.Children.Add(author);
+                Label titleIngredients = new Label();
+                Grid.SetColumn(titleIngredients, 1);
+                Grid.SetRow(titleIngredients, 3);
+                titleIngredients.Content = "Ingredience:";
+                newRecipe.Children.Add(titleIngredients);
+                Label titleProcess = new Label();
+                Grid.SetColumn(titleProcess, 3);
+                Grid.SetRow(titleProcess, 3);
+                titleProcess.Content = "Postup:";
+                newRecipe.Children.Add(titleProcess);
+                Label ingredients = new Label();
+                Grid.SetColumn(ingredients, 1);
+                Grid.SetRow(ingredients, 5);
+                Grid.SetRowSpan(ingredients, 2);
+                ingredients.BorderBrush = Brushes.Black;
+                ingredients.BorderThickness = new Thickness(1);
+                ingredients.Content = ingredientsText;
+                newRecipe.Children.Add(ingredients);
+                Label process = new Label();
+                Grid.SetColumn(process, 3);
+                Grid.SetRow(process, 5);
+                Grid.SetRowSpan(process, 2);
+                process.BorderBrush = Brushes.Black;
+                process.BorderThickness = new Thickness(1);
+                process.Content = processText;
+                newRecipe.Children.Add(process);
+                Button delete = new Button();
+                delete.Height = 30;
+                delete.Width = 100;
+                delete.VerticalAlignment = VerticalAlignment.Bottom;
+                delete.HorizontalAlignment = HorizontalAlignment.Center;
+                Grid.SetColumn(delete, 5);
+                Grid.SetRow(delete, 5);
+                delete.FontWeight = FontWeights.Bold;
+                delete.Content = "Smazat";
+                Button change = new Button();
+                change.Height = 30;
+                change.Width = 100;
+                change.VerticalAlignment = VerticalAlignment.Center;
+                change.HorizontalAlignment = HorizontalAlignment.Center;
+                Grid.SetColumn(change, 5);
+                Grid.SetRow(change, 6);
+                change.FontWeight = FontWeights.Bold;
+                change.Content = "Upravit";
+
+                if (Application.Current.MainWindow is MainWindow main)
                 {
-                    if (authorText == loggedAuthor)
+                    if (main.logged)
                     {
-                        delete.Click += new RoutedEventHandler(mainWindow.Delete_Click);
-                        change.Click += new RoutedEventHandler(mainWindow.Change_Click);
-                        delete.IsEnabled = true;
-                        change.IsEnabled = true;
+                        if (authorText == loggedAuthor)
+                        {
+                            delete.Click += new RoutedEventHandler(main.Delete_Click);
+                            change.Click += new RoutedEventHandler(main.Change_Click);
+                            delete.IsEnabled = true;
+                            change.IsEnabled = true;
+                        }
+                        else
+                        {
+                            delete.IsEnabled = false;
+                            change.IsEnabled = false;
+                        }
                     }
                     else
                     {
                         delete.IsEnabled = false;
                         change.IsEnabled = false;
                     }
+
+                    newRecipe.Children.Add(delete);
+                    newRecipe.Children.Add(change);
+                    newRecipe.Name = $"{authorText}_{titleText}_{date.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{vegan}";
+                    main.recipesChildren.Add(newRecipe);
+                    main.Sort.SelectedValue = null;
+                    if (loading)
+                    {
+                        main.Recipes.Children.Add(newRecipe);
+                    }
+                    else
+                    {
+                        main.Searching();
+                    }
+                    main.IsEnabled = true;
+                    this.Close();
                 }
                 else
                 {
-                    delete.IsEnabled = false;
-                    change.IsEnabled = false;
+                    throw new Exception("Unexpected application window.");
                 }
             }
-            else
+            catch (Exception)
             {
-                throw new Exception("Unexpected application window.");
-            }
-
-            newRecipe.Children.Add(delete);
-            newRecipe.Children.Add(change);
-            newRecipe.Name = titleText.ToString();
-
-            if (Application.Current.MainWindow is MainWindow main)
-            {
-                main.Recipes.Children.Add(newRecipe);
-                main.IsEnabled = true;
-                this.Close();
-            }
-            else
-            {
-                throw new Exception("Unexpected application window.");
+                Error.Content = "Toto jméno receptu není validní!";
             }
         }
 

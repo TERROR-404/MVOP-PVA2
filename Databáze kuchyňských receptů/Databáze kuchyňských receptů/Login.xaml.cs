@@ -22,7 +22,7 @@ namespace Databáze_kuchyňských_receptů
     /// </summary>
     public partial class Login : Window
     {
-        private string filePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\Registered_users.txt";
+        private string userFilePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\Registered_users.txt";
         public Login()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace Databáze_kuchyňských_receptů
             string password = LogPassword.Text;
             if (name != "" && password != "")
             {
-                using (StreamReader reader = new StreamReader(filePath, true))
+                using (StreamReader reader = new StreamReader(userFilePath, true))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -62,7 +62,7 @@ namespace Databáze_kuchyňských_receptů
                     Password = password
                 };
                 string jsonString = JsonSerializer.Serialize(u);
-                using (StreamWriter writer = new StreamWriter(filePath, true))
+                using (StreamWriter writer = new StreamWriter(userFilePath, true))
                 {
                     writer.WriteLine(jsonString);
                 }
@@ -85,7 +85,7 @@ namespace Databáze_kuchyňských_receptů
             string password = LogPassword.Text;
             if (name != "" && password != "")
             {
-                using (StreamReader reader = new StreamReader(filePath, true))
+                using (StreamReader reader = new StreamReader(userFilePath, true))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
