@@ -1,0 +1,7 @@
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\bin\Debug\skola-testovani-uloha1.exe.config
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\bin\Debug\skola-testovani-uloha1.exe
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\bin\Debug\skola-testovani-uloha1.pdb
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\obj\Debug\skola-testovani-uloha1.csproj.AssemblyReference.cache
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\obj\Debug\skola-testovani-uloha1.csproj.CoreCompileInputs.cache
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\obj\Debug\skola-testovani-uloha1.exe
+C:\Users\cmerd\source\repos\skola-testovani-uloha1\skola-testovani-uloha1\obj\Debug\skola-testovani-uloha1.pdb

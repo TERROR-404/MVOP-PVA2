@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "skola-testovani-uloha/1.0.0": {
+        "runtime": {
+          "skola-testovani-uloha.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "skola-testovani-uloha/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
