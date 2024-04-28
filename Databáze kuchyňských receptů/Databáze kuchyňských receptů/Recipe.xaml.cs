@@ -44,20 +44,20 @@ namespace Databáze_kuchyňských_receptů
                     if (changeRecipe)
                     {
                         main.Recipes.Children.Remove(changeGrid);
-                        List<string> recipes = new List<string>();
+                        List<string> recipesString = new List<string>();
                         using (StreamReader reader = new StreamReader(recipesFilePath, true))
                         {
                             string line;
                             while ((line = reader.ReadLine()) != null)
                             {
                                 RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                                if ($"{recipesClass.Author}_{recipesClass.Title}_{recipesClass.Time.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{recipesClass.Vegetarian}" != changeGrid.Name)
+                                if (recipesClass != main.recipes[main.Recipes.Children.IndexOf(changeGrid)])
                                 {
-                                    recipes.Add(line);
+                                    recipesString.Add(line);
                                 }
                             }
                         }
-                        File.WriteAllLines(recipesFilePath, recipes);
+                        File.WriteAllLines(recipesFilePath, recipesString);
                     }
                     bool vege = false;
                     if (Vegan.IsChecked == true)
@@ -74,6 +74,7 @@ namespace Databáze_kuchyňských_receptů
                         Vegetarian = vege,
                         Time = time
                     };
+                    main.recipes.Add(r);
                     string jsonString = JsonSerializer.Serialize(r);
                     using (StreamWriter writer = new StreamWriter(recipesFilePath, true))
                     {
@@ -229,8 +230,6 @@ namespace Databáze_kuchyňských_receptů
 
                     newRecipe.Children.Add(delete);
                     newRecipe.Children.Add(change);
-                    newRecipe.Name = $"{authorText}_{titleText}_{date.ToString().Replace(":", "a").Replace(".", "b").Replace(" ", "c")}_{vegan}";
-                    main.recipesChildren.Add(newRecipe);
                     main.Sort.SelectedValue = null;
                     if (loading)
                     {
