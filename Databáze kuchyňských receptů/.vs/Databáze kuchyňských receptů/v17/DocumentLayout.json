@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D703750-4360-4F82-92A1-94DB7F2DC1EA}|Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F.csproj|c:\\users\\cmerd\\documents\\github\\mvop-pva2\\datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8D703750-4360-4F82-92A1-94DB7F2DC1EA}|Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F.csproj|solutionrelative:datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D703750-4360-4F82-92A1-94DB7F2DC1EA}|Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F.csproj|c:\\users\\cmerd\\documents\\github\\mvop-pva2\\datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\recipesclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D703750-4360-4F82-92A1-94DB7F2DC1EA}|Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F.csproj|C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\recipesclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D703750-4360-4F82-92A1-94DB7F2DC1EA}|Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F.csproj|solutionrelative:datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\recipesclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,50 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml",
-              "RelativeToolTip": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-28T00:28:38.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "RecipesClass.cs",
               "DocumentMoniker": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\RecipesClass.cs",
               "RelativeDocumentMoniker": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\RecipesClass.cs",
               "ToolTip": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\RecipesClass.cs",
               "RelativeToolTip": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\RecipesClass.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAADwvwoAAAApAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAADwvw8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T21:08:56.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Recipe.xaml.cs",
               "DocumentMoniker": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Recipe.xaml.cs",
               "RelativeDocumentMoniker": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Recipe.xaml.cs",
               "ToolTip": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Recipe.xaml.cs",
               "RelativeToolTip": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Recipe.xaml.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAAAEUAAAArAAAA",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAAwNwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T12:32:08.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\cmerd\\Documents\\GitHub\\MVOP-PVA2\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml.cs",
               "RelativeToolTip": "Datab\u00E1ze kuchy\u0148sk\u00FDch recept\u016F\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAUwLEAAAAtAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAxwIYAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-09T12:59:50.325Z",
               "EditorCaption": ""

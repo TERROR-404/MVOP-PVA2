@@ -8,6 +8,7 @@ namespace Databáze_kuchyňských_receptů
 {
     public class RecipesClass
     {
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Ingredients { get; set; }
         public string Process { get; set; }

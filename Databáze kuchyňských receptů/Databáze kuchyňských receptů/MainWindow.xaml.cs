@@ -28,6 +28,7 @@ namespace Databáze_kuchyňských_receptů
         public string author;
         public string recipesFilePath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\recipes.txt";
         public List<RecipesClass> recipes = new List<RecipesClass>();
+        public int highestID = 1;
         public MainWindow()
         {
             InitializeComponent();
@@ -45,8 +46,9 @@ namespace Databáze_kuchyňských_receptů
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
                     Recipe recipe = new Recipe();
+                    if (recipesClass.ID > highestID){ highestID = recipesClass.ID+1; }
                     recipes.Add(recipesClass);
-                    recipe.Add_Recipe(recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author, recipesClass.Vegetarian, recipesClass.Time, true);
+                    recipe.Add_Recipe(recipesClass.ID, recipesClass.Title, recipesClass.Ingredients, recipesClass.Process, recipesClass.Author, author, recipesClass.Vegetarian, recipesClass.Time, true);
                 }
             }
         }
@@ -74,7 +76,7 @@ namespace Databáze_kuchyňských_receptů
                 foreach (var item in recipes)
                 {
                     Recipe recipe = new Recipe();
-                    recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                    recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                 }
             }
             else
@@ -84,7 +86,7 @@ namespace Databáze_kuchyňských_receptů
                     if (item.Title == searching || item.Author == searching)
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                        recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                     }
                 }
             }
@@ -104,9 +106,21 @@ namespace Databáze_kuchyňských_receptů
                 while ((line = reader.ReadLine()) != null)
                 {
                     RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                    if (recipesClass != recipes[Recipes.Children.IndexOf(parentGrid)])
+                    if (Convert.ToString(recipesClass.ID) != parentGrid.Name.Replace("_",""))
                     {
                         recipesString.Add(line);
+                    }
+                    else
+                    {
+                        foreach (var item in recipes)
+                        {
+                            if (item.ID == recipesClass.ID)
+                            {
+                                recipes.Remove(item);
+                                break;
+                            }
+                        }
+                        continue;
                     }
                 }
             }
@@ -119,17 +133,24 @@ namespace Databáze_kuchyňských_receptů
             Grid parentGrid = (Grid)parentObject;
             Recipe R = new Recipe();
             R.changeRecipe = true;
-            foreach (var item in recipes)
+
+            using (StreamReader reader = new StreamReader(recipesFilePath, true))
             {
-                if (item == recipes[Recipes.Children.IndexOf(parentGrid)])
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    R.Title.Text = item.Title;
-                    R.Ingredients.Text = item.Ingredients;
-                    R.Process.Text = item.Process;
-                    R.Vegan.IsChecked = item.Vegetarian;
-                    break;
-                }                
+                    RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
+                    if (Convert.ToString(recipesClass.ID) == parentGrid.Name.Replace("_",""))
+                    {
+                        R.Title.Text = recipesClass.Title;
+                        R.Ingredients.Text = recipesClass.Ingredients;
+                        R.Process.Text = recipesClass.Process;
+                        R.Vegan.IsChecked = recipesClass.Vegetarian;
+                        break;
+                    }
+                }
             }
+
             R.changeGrid = parentGrid;
             R.authorName = author;
             R.Show();
@@ -152,7 +173,7 @@ namespace Databáze_kuchyňských_receptů
                     if (item.Vegetarian)
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                        recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                     }
                 }
             }
@@ -163,7 +184,7 @@ namespace Databáze_kuchyňských_receptů
                     if (item.Vegetarian && (item.Title == searching || item.Author == searching))
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                        recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                     }
                 }
             }
@@ -178,7 +199,7 @@ namespace Databáze_kuchyňských_receptů
                 foreach (var item in recipes)
                 {
                     Recipe recipe = new Recipe();
-                    recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                    recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                 }
             }
             else
@@ -188,7 +209,7 @@ namespace Databáze_kuchyňských_receptů
                     if (item.Title == searching || item.Author == searching)
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                        recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                     }
                 }
             }
@@ -224,7 +245,7 @@ namespace Databáze_kuchyňských_receptů
                         if (item.Vegetarian)
                         {
                             Recipe recipe = new Recipe();
-                            recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                            recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                         }
                     }
                 }
@@ -233,7 +254,7 @@ namespace Databáze_kuchyňských_receptů
                     foreach (var item in recipes)
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Add_Recipe(item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
+                        recipe.Add_Recipe(item.ID, item.Title, item.Ingredients, item.Process, item.Author, author, item.Vegetarian, item.Time, true);
                     }
                 }
                 Searching();

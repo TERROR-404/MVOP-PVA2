@@ -51,9 +51,21 @@ namespace Databáze_kuchyňských_receptů
                             while ((line = reader.ReadLine()) != null)
                             {
                                 RecipesClass recipesClass = JsonSerializer.Deserialize<RecipesClass>(line);
-                                if (recipesClass != main.recipes[main.Recipes.Children.IndexOf(changeGrid)])
+                                if (Convert.ToString(recipesClass.ID) != changeGrid.Name.Replace("_",""))
                                 {
                                     recipesString.Add(line);
+                                }
+                                else
+                                {
+                                    foreach (var item in main.recipes)
+                                    {
+                                        if (item.ID == recipesClass.ID)
+                                        {
+                                            main.recipes.Remove(item);
+                                            break;
+                                        }
+                                    }
+                                    continue;
                                 }
                             }
                         }
@@ -67,6 +79,7 @@ namespace Databáze_kuchyňských_receptů
                     DateTime time = DateTime.Now;
                     RecipesClass r = new RecipesClass
                     {
+                        ID = main.highestID,
                         Title = Title.Text,
                         Ingredients = Ingredients.Text,
                         Process = Process.Text,
@@ -80,7 +93,8 @@ namespace Databáze_kuchyňských_receptů
                     {
                         writer.WriteLine(jsonString);
                     }
-                    Add_Recipe(Title.Text, Ingredients.Text, Process.Text, authorName, authorName, vege, time, false);
+                    Add_Recipe(main.highestID,Title.Text, Ingredients.Text, Process.Text, authorName, authorName, vege, time, false);
+                    main.highestID++;
                     if (main.Sort.SelectedValue != null)
                     {
                         main.Sort_Recipes();
@@ -92,7 +106,7 @@ namespace Databáze_kuchyňských_receptů
                 }
             }
         }
-        public void Add_Recipe(string titleText, string ingredientsText, string processText, string authorText, string loggedAuthor, bool vegan, DateTime date, bool loading)
+        public void Add_Recipe(int id,string titleText, string ingredientsText, string processText, string authorText, string loggedAuthor, bool vegan, DateTime date, bool loading)
         {
             try
             {
@@ -204,6 +218,7 @@ namespace Databáze_kuchyňských_receptů
                 Grid.SetRow(change, 6);
                 change.FontWeight = FontWeights.Bold;
                 change.Content = "Upravit";
+                newRecipe.Name = $"_{id}";
 
                 if (Application.Current.MainWindow is MainWindow main)
                 {
