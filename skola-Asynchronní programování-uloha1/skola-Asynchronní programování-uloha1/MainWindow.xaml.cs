@@ -27,8 +27,8 @@ namespace skola_Asynchronní_programování_uloha1
         private CancellationToken ct;
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private int output1;
-        public int Output1
+        private string output1;
+        public string Output1
         {
             get { return output1; }
             set
@@ -37,8 +37,8 @@ namespace skola_Asynchronní_programování_uloha1
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Output1"));
             }
         }
-        private int output2;
-        public int Output2
+        private string output2;
+        public string Output2
         {
             get { return output2; }
             set
@@ -47,8 +47,8 @@ namespace skola_Asynchronní_programování_uloha1
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Output2"));
             }
         }
-        private int output3;
-        public int Output3
+        private string output3;
+        public string Output3
         {
             get { return output3; }
             set
@@ -68,6 +68,22 @@ namespace skola_Asynchronní_programování_uloha1
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             string input = (string)textbox1.Text;
+            bool outputload = true;
+            Task.Run(async () =>
+            {
+                await Task.Delay(500);
+                while (outputload && ct.IsCancellationRequested == false)
+                {
+                    Output1 = "-";
+                    await Task.Delay(500);
+                    Output1 = "\\";
+                    await Task.Delay(500);
+                    Output1 = "|";
+                    await Task.Delay(500);
+                    Output1 = "/";
+                    await Task.Delay(500);
+                }
+            });
             Task.Run(async () =>
             {
                 int a = 1;
@@ -75,36 +91,71 @@ namespace skola_Asynchronní_programování_uloha1
                 {
                     if (isPrime(a) && Convert.ToString(a).Contains(input))
                     {
-                        Output1 = a;
+                        outputload = false;
+                        Output1 = a.ToString();
                         break;
                     }
                     a++;
                 }
+                outputload = false;
             });
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             string input = (string)textbox2.Text;
+            bool outputload = true;
+
+            Task.Run(async () =>
+            {
+                await Task.Delay(500);
+                while (outputload && ct.IsCancellationRequested == false)
+                {
+                    Output2 = "-";
+                    await Task.Delay(500);
+                    Output2 = "\\";
+                    await Task.Delay(500);
+                    Output2 = "|";
+                    await Task.Delay(500);
+                    Output2 = "/";
+                    await Task.Delay(500);
+                }
+            });
             Task.Run(() => {
                 int a = 1;
                 while (ct.IsCancellationRequested == false)
                 {
                     if (isPrime(a) && Convert.ToString(a).Contains(input))
                     {
-                        Output2 = a;
+                        outputload = false;
+                        Output2 = a.ToString();
                         break;
                     }
                     a++;
                 }
-
-                return Task.CompletedTask;
+                outputload = false;
             });
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             string input = (string)textbox3.Text;
+            bool outputload = true;
+            Task.Run(async () =>
+            {
+                await Task.Delay(500);
+                while (outputload && ct.IsCancellationRequested == false)
+                {
+                    Output3 = "-";
+                    await Task.Delay(500);
+                    Output3 = "\\";
+                    await Task.Delay(500);
+                    Output3 = "|";
+                    await Task.Delay(500);
+                    Output3 = "/";
+                    await Task.Delay(500);
+                }
+            });
             Task.Run(async () =>
             {
                 int a = 1;
@@ -112,11 +163,13 @@ namespace skola_Asynchronní_programování_uloha1
                 {
                     if (isPrime(a) && Convert.ToString(a).Contains(input))
                     {
-                        Output3 = a;
+                        outputload = false;
+                        Output3 = a.ToString();
                         break;
                     }
                     a++;
                 }
+                outputload = false;
             });
         }
         private bool isPrime(int number)

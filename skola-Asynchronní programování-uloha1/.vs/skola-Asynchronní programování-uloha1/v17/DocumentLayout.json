@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cmerd\\OneDrive\\Plocha\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\",
+  "WorkspaceRootPath": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|c:\\users\\cmerd\\onedrive\\plocha\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|c:\\users\\cmerd\\onedrive\\dokumenty\\github\\mvop-pva2\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|solutionrelative:skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|c:\\users\\cmerd\\onedrive\\plocha\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7684839B-51C9-4B11-84BB-D7D25A5F0652}|skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1.csproj|solutionrelative:skola-asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Plocha\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Plocha\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
               "RelativeToolTip": "skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-06T12:09:19.908Z",
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Plocha\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Plocha\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
               "RelativeToolTip": "skola-Asynchronn\u00ED programov\u00E1n\u00ED-uloha1\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAwwEgAAAAaAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAYwKsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T12:09:17.447Z",
               "EditorCaption": ""
