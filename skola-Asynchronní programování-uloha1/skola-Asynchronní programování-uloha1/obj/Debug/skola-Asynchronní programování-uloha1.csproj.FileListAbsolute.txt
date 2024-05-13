@@ -1,0 +1,15 @@
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\bin\Debug\skola-Asynchronní programování-uloha1.exe.config
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\bin\Debug\skola-Asynchronní programování-uloha1.exe
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\bin\Debug\skola-Asynchronní programování-uloha1.pdb
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.csproj.AssemblyReference.cache
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\MainWindow.g.cs
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\App.g.cs
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1_MarkupCompile.cache
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1_MarkupCompile.lref
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\MainWindow.baml
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.g.resources
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola_Asynchronní_programování_uloha1.Properties.Resources.resources
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.csproj.GenerateResource.cache
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.csproj.CoreCompileInputs.cache
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.exe
+C:\Users\cmerd\OneDrive\Plocha\skola-Asynchronní programování-uloha1\skola-Asynchronní programování-uloha1\obj\Debug\skola-Asynchronní programování-uloha1.pdb
