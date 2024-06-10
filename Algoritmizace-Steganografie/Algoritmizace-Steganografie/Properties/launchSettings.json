@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Algoritmizace-Steganografie": {
-      "commandName": "Project",
-      "commandLineArgs": "image.bmp\r\nsteganografie"
-    }
-  }
-}
