@@ -1,0 +1,14 @@
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\bin\Debug\net6.0\skola-posledni_hodina.exe
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\bin\Debug\net6.0\skola-posledni_hodina.deps.json
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\bin\Debug\net6.0\skola-posledni_hodina.runtimeconfig.json
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\bin\Debug\net6.0\skola-posledni_hodina.dll
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\bin\Debug\net6.0\skola-posledni_hodina.pdb
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.AssemblyInfoInputs.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.AssemblyInfo.cs
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.csproj.CoreCompileInputs.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.dll
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\refint\skola-posledni_hodina.dll
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.pdb
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\skola-posledni_hodina.genruntimeconfig.cache
+C:\Users\cmerda.bo.2021\source\repos\skola-posledni_hodina\skola-posledni_hodina\obj\Debug\net6.0\ref\skola-posledni_hodina.dll
