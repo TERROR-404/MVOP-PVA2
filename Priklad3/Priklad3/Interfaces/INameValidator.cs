@@ -8,6 +8,6 @@ namespace Priklad3.Interfaces
 {
     interface INameValidator
     {
-        bool isValid(string name);
+        bool IsValid(string name);
     }
 }

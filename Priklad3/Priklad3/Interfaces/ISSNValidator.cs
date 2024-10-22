@@ -8,6 +8,6 @@ namespace Priklad3.Interfaces
 {
     interface ISSNValidator
     {
-        bool isValid(string issn, string birthDate);
+        bool IsValid(string issn, string birthDate);
     }
 }

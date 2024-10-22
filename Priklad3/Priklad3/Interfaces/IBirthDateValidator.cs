@@ -8,6 +8,6 @@ namespace Priklad3.Interfaces
 {
     interface IBirthDateValidator
     {
-        bool isValid(string birthDate, out DateTime retVal);
+        bool IsValid(string birthDate, out DateTime retVal);
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wkuhpoFdaKETv3/RiyMuws92tslUbUwrLS9iGYimxBhYxUEJj/A4G0k56RIM8e9Z/lXG4TsiYKbap25YVfRlZw==",
+  "dgSpecHash": "MvYXoyW9vlEOsKdB6v2jmilYaDPsnKJ7Il8mK3ISOGbBDcyq/mNgEwYogbEPOrQQCxEcw06fhjfaMnjXKWT8lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cmerd\\source\\repos\\Priklad3\\Priklad3\\Priklad3.csproj",
+  "projectFilePath": "C:\\Users\\cmerd\\Source\\Repos\\TERROR-404\\MVOP-PVA2\\Priklad3\\Priklad3\\Priklad3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cmerd\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\cmerd\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",

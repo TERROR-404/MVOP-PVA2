@@ -42771,11 +42771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cmerd\\source\\repos\\Priklad3\\Priklad3\\Priklad3.csproj",
+      "projectUniqueName": "C:\\Users\\cmerd\\Source\\Repos\\TERROR-404\\MVOP-PVA2\\Priklad3\\Priklad3\\Priklad3.csproj",
       "projectName": "Priklad3",
-      "projectPath": "C:\\Users\\cmerd\\source\\repos\\Priklad3\\Priklad3\\Priklad3.csproj",
+      "projectPath": "C:\\Users\\cmerd\\Source\\Repos\\TERROR-404\\MVOP-PVA2\\Priklad3\\Priklad3\\Priklad3.csproj",
       "packagesPath": "C:\\Users\\cmerd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cmerd\\source\\repos\\Priklad3\\Priklad3\\obj\\",
+      "outputPath": "C:\\Users\\cmerd\\Source\\Repos\\TERROR-404\\MVOP-PVA2\\Priklad3\\Priklad3\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
