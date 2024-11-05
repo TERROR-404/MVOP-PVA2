@@ -10,10 +10,10 @@ namespace Priklad3
 
             string createTableQuery = @"CREATE TABLE IF NOT EXISTS [Osoby] (
                           [ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                          [Name] TEXT  NULL,
+                          [Name] VARCHAR(2048) NOT  NULL,
                           [Surname] VARCHAR(2048) NOT NULL,
-						  [Birthday] TEXT NULL,
-                          [SSN] TEXT  NULL
+						  [Birthday] TEXT NOT NULL,
+                          [SSN] TEXT NOT NULL
                           )";
             string db = "Db.sqlite";
             string connectionString = "Data Source=" + db + ";Version=3";
@@ -28,36 +28,19 @@ namespace Priklad3
                         com.CommandText = createTableQuery;
                         com.ExecuteNonQuery();
 
-                        com.CommandText = "INSERT INTO Osoby (Jmeno, Prijmeni, Narozen) Values ('Bob','Dylan', '1941-05-24')";
+                        com.CommandText = "INSERT INTO Osoby (Name, Surname, Birthday, SSN) Values ('Bob','Dylan', '1941-05-24', 123456/7890)";
                         int pocetZmenenychRadku = com.ExecuteNonQuery();
-                        Console.WriteLine($"Počet změněných řádků: {pocetZmenenychRadku}");
-
-                        com.CommandText = "INSERT INTO Osoby (Jmeno, Prijmeni) Values ('Jack','Kerouac')";
-                        com.ExecuteNonQuery();
 
                         com.CommandText = "SELECT * FROM Osoby";
                         using (SQLiteDataReader reader = com.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                Console.WriteLine($"({reader["ID"]}):{reader["Jmeno"],-20} {reader["Prijmeni"],-20} \t\tnarozen {reader["Narozen"]}");
+                                Label label = new Label();
+                                label.Text = ($"({reader["ID"]}):{reader["Name"],-20} {reader["Surname"],-20} \t\tnarozen {reader["Birthday"]} {reader["SSN"]}");
                             }
                         }
-                        com.CommandText = "DELETE FROM [Osoby] WHERE [Prijmeni] = 'Dylan'";
-                        com.ExecuteNonQuery();
-
-                        com.CommandText = "ALTER TABLE [Osoby] ADD [Vaha] NUMERIC";
-                        com.ExecuteNonQuery();
-
-                        com.CommandText = "UPDATE [Osoby] SET [Narozen]='1922-03-22', [Vaha] = 68 WHERE Prijmeni='Kerouac'";
-                        com.ExecuteNonQuery();
-                        com.CommandText = "INSERT INTO Osoby (Jmeno, Prijmeni, Narozen, Vaha) Values ('Karel', 'Klostermann', '1848-02-14', 86)";
-                        com.ExecuteNonQuery();
-
-                        com.CommandText = "DROP TABLE [Osoby]";
-                        com.ExecuteNonQuery();
                     }
-
                     sqlC.Close();
                 }
             }

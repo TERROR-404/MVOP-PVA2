@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Priklad3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7bf0fe2c475e9d845791a99bcc2e098589211c55")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+97715cc65b8fed640714f6b6a1c7b417f8101367")]
 [assembly: System.Reflection.AssemblyProductAttribute("Priklad3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Priklad3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

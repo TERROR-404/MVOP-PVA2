@@ -1,7 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cmerd\\source\\repos\\Priklad3\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|c:\\users\\cmerd\\onedrive\\dokumenty\\github\\mvop-pva2\\priklad3\\priklad3\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|solutionrelative:priklad3\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.52\\targets\\Microsoft.Android.Sdk.AssemblyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|c:\\users\\cmerd\\onedrive\\dokumenty\\github\\mvop-pva2\\priklad3\\priklad3\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|solutionrelative:priklad3\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|c:\\users\\cmerd\\onedrive\\dokumenty\\github\\mvop-pva2\\priklad3\\priklad3\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{88553371-2AC7-477D-A750-6192E8966F4F}|Priklad3\\Priklad3.csproj|solutionrelative:priklad3\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +38,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Android.Sdk.AssemblyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.52\\targets\\Microsoft.Android.Sdk.AssemblyResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.52\\targets\\Microsoft.Android.Sdk.AssemblyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.52\\targets\\Microsoft.Android.Sdk.AssemblyResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.52\\targets\\Microsoft.Android.Sdk.AssemblyResolution.targets",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAHoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-11-05T10:22:21.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Priklad3\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MainPage.xaml.cs",
+              "RelativeToolTip": "Priklad3\\MainPage.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAiwAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T10:02:48.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "Priklad3\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MauiProgram.cs",
+              "RelativeToolTip": "Priklad3\\MauiProgram.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAYwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:38:44.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Priklad3\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\cmerd\\OneDrive\\Dokumenty\\GitHub\\MVOP-PVA2\\Priklad3\\Priklad3\\MainPage.xaml",
+              "RelativeToolTip": "Priklad3\\MainPage.xaml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T09:27:02.079Z",
+              "EditorCaption": ""
             }
           ]
         }
