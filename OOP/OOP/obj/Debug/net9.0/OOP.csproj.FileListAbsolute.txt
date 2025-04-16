@@ -1,0 +1,14 @@
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.GeneratedMSBuildEditorConfig.editorconfig
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.AssemblyInfoInputs.cache
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.AssemblyInfo.cs
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.csproj.CoreCompileInputs.cache
+/home/terror-404/Desktop/OOP/bin/Debug/net9.0/OOP
+/home/terror-404/Desktop/OOP/bin/Debug/net9.0/OOP.deps.json
+/home/terror-404/Desktop/OOP/bin/Debug/net9.0/OOP.runtimeconfig.json
+/home/terror-404/Desktop/OOP/bin/Debug/net9.0/OOP.dll
+/home/terror-404/Desktop/OOP/bin/Debug/net9.0/OOP.pdb
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.dll
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/refint/OOP.dll
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.pdb
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/OOP.genruntimeconfig.cache
+/home/terror-404/Desktop/OOP/obj/Debug/net9.0/ref/OOP.dll
