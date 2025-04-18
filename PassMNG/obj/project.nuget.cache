@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "J5gMb89QGpI=",
+  "success": true,
+  "projectFilePath": "/home/terror-404/Desktop/MVOP-PVA2/PassMNG/PassMNG.csproj",
+  "expectedPackageFiles": [
+    "/home/terror-404/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.3/microsoft.aspnetcore.app.ref.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

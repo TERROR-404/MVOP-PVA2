@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JCR2NmxtGbw=",
+  "dgSpecHash": "/3JB30IZqz4=",
   "success": true,
-  "projectFilePath": "/home/terror-404/Desktop/RegexProject/RegexProject.csproj",
+  "projectFilePath": "/home/terror-404/Desktop/MVOP-PVA2/RegexProject/RegexProject.csproj",
   "expectedPackageFiles": [
     "/home/terror-404/.nuget/packages/benchmarkdotnet/0.14.0/benchmarkdotnet.0.14.0.nupkg.sha512",
     "/home/terror-404/.nuget/packages/benchmarkdotnet.annotations/0.14.0/benchmarkdotnet.annotations.0.14.0.nupkg.sha512",

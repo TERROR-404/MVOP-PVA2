@@ -1,0 +1,15 @@
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/bin/Debug/net9.0/PassMNG
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/bin/Debug/net9.0/PassMNG.deps.json
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/bin/Debug/net9.0/PassMNG.runtimeconfig.json
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/bin/Debug/net9.0/PassMNG.dll
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/bin/Debug/net9.0/PassMNG.pdb
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.GeneratedMSBuildEditorConfig.editorconfig
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.AssemblyInfoInputs.cache
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.AssemblyInfo.cs
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.csproj.CoreCompileInputs.cache
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.sourcelink.json
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.dll
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/refint/PassMNG.dll
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.pdb
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/PassMNG.genruntimeconfig.cache
+/home/terror-404/Desktop/MVOP-PVA2/PassMNG/obj/Debug/net9.0/ref/PassMNG.dll

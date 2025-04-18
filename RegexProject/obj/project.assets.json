@@ -1733,11 +1733,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/terror-404/Desktop/RegexProject/RegexProject.csproj",
+      "projectUniqueName": "/home/terror-404/Desktop/MVOP-PVA2/RegexProject/RegexProject.csproj",
       "projectName": "RegexProject",
-      "projectPath": "/home/terror-404/Desktop/RegexProject/RegexProject.csproj",
+      "projectPath": "/home/terror-404/Desktop/MVOP-PVA2/RegexProject/RegexProject.csproj",
       "packagesPath": "/home/terror-404/.nuget/packages/",
-      "outputPath": "/home/terror-404/Desktop/RegexProject/obj/",
+      "outputPath": "/home/terror-404/Desktop/MVOP-PVA2/RegexProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/terror-404/.nuget/NuGet/NuGet.Config"
