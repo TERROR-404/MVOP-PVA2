@@ -26,7 +26,7 @@ namespace PassMNG
 
     class Cypher
     {
-        private static byte[] mainHash = SHA256.HashData(Encoding.UTF8.GetBytes("Jjbsl4273"));
+        private static byte[] mainHash = SHA256.HashData(Encoding.UTF8.GetBytes("MasterPassword"));
 
         public static bool Auth()
         {
@@ -39,6 +39,24 @@ namespace PassMNG
                     return false;
                 }
                 byte[] passwordHash = SHA256.HashData(Encoding.UTF8.GetBytes(word));
+                using (
+                    var reader = new StreamReader(
+                        Environment.CurrentDirectory + $"/pwds/{Convert.ToHexString(mainHash)}.txt"
+                    )
+                )
+                {
+                    string? line = reader.ReadLine();
+                    if (line == null)
+                    {
+                        return false;
+                    }
+                    byte[] masterHash = Convert.FromHexString(line);
+                    if (masterHash.SequenceEqual(passwordHash))
+                    {
+                        return true;
+                    }
+                    reader.Close();
+                }
                 if (mainHash.SequenceEqual(passwordHash))
                 {
                     return true;
@@ -94,6 +112,13 @@ namespace PassMNG
             string[] files = Directory.GetFiles(Environment.CurrentDirectory + "/pwds");
             foreach (string filei in files)
             {
+                if (
+                    Path.GetFileName(filei)
+                    == "73567E977FBEB14CB66974484E2CF1AE7596B8744BDB7DDFD33457A0A44D5E44.txt"
+                )
+                {
+                    continue;
+                }
                 using (var reader = new StreamReader(filei))
                 {
                     string? line = reader.ReadLine();

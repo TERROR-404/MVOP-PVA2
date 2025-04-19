@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PassMNG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+767f287f7a9d758ab2cc6a257e23e3039f7527e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55467c64cf5eecf73cf145c9b86f149624968270")]
 [assembly: System.Reflection.AssemblyProductAttribute("PassMNG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PassMNG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
