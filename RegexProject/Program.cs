@@ -3,7 +3,7 @@
 string url = "https://archive.ssps.cajthaml.eu/2024-2025/3-dvop-wbb/05_backend.html#/";
 Dictionary<string, List<string>> headings = new Dictionary<string, List<string>>();
 HttpClient client = new HttpClient();
-string pattern = @"<h[1-5].*?>.*?<\/h[1-5]>";
+string pattern = @"<h[1-5].*?>(<.*?>)*?(.*?)(</.*?>)*?<\/h[1-5]>";
 string source;
 
 using (StreamReader reader = new StreamReader(await client.GetStreamAsync(url)))
@@ -16,7 +16,7 @@ try
     {
         if (!string.IsNullOrEmpty(match.Value))
         {
-            Add(match.Value.Substring(1, 2), match.Value.Substring(4, match.Value.Length - 9));
+            Add(match.Value.Substring(1, 2), Convert.ToString(match.Groups[2]));
         }
     }
 }
